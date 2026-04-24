@@ -1,0 +1,34 @@
+Building DAG of jobs...
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job             count
+------------  -------
+all                 1
+plot_domains        1
+total               2
+
+Select jobs to execute...
+
+[Fri Apr 24 11:54:12 2026]
+rule plot_domains:
+    input: results/TP53/domains.csv
+    output: results/TP53/domain_plot.png
+    jobid: 1
+    reason: Missing output files: results/TP53/domain_plot.png
+    resources: tmpdir=C:\Users\pamog\AppData\Local\Temp
+
+[Fri Apr 24 11:54:20 2026]
+Error in rule plot_domains:
+    jobid: 1
+    input: results/TP53/domains.csv
+    output: results/TP53/domain_plot.png
+
+RuleException:
+CalledProcessError in file C:\amogh\projects\Bioprojects\bio-pipeline\Snakefile, line 79:
+Command 'C:/Users/pamog/anaconda3/envs/snakeenv/python.exe "C:\amogh\projects\Bioprojects\bio-pipeline\.snakemake\scripts\tmpgm0k810p.plot_domains.py"' returned non-zero exit status 1.
+  File "C:\amogh\projects\Bioprojects\bio-pipeline\Snakefile", line 79, in __rule_plot_domains
+  File "C:\Users\pamog\anaconda3\envs\snakeenv\lib\concurrent\futures\thread.py", line 58, in run
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake\log\2026-04-24T115412.273673.snakemake.log
